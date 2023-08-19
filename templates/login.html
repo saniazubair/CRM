@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="margin-top:50px;" action="{% url 'login_process' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <button type="submit">SUBMIT</button>
+</form>
+
+{% for message in messages %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>{{ message }}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+</body>
+</html>

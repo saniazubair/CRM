@@ -1,0 +1,12 @@
+asgiref==3.7.2
+distlib==0.3.6
+Django==4.2.3
+filelock==3.12.2
+pbr==5.11.1
+platformdirs==3.8.1
+sqlparse==0.4.4
+stevedore==5.1.0
+tzdata==2023.3
+virtualenv==20.23.1
+virtualenv-clone==0.5.7
+virtualenvwrapper==4.8.4

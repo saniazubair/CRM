@@ -1,0 +1,32 @@
+{%  extends 'main.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+
+{% if action == 'create' or action == 'update' %}
+<form style="margin-top:50px;" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">SUBMIT</button>
+</form>
+
+
+{% endif %}
+
+{% if action == 'delete' %}
+<form style="margin-top:50px;" method="POST">
+    {% csrf_token %}
+    <p>Are you sure you want to delete "{{product}}"</p>
+    <button type="submit">SUBMIT</button>
+</form>
+
+{% endif %}
+{% endblock %}
+</body>
+</html>
